@@ -1,0 +1,13 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+work/
+input_clips/*
+!input_clips/.gitkeep
+music/*
+!music/.gitkeep
+output/*
+!output/.gitkeep

@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-daily-vlog"
+version = "0.1.0"
+description = "AI auto-editor for daily storytelling vlogs using OpenAI API + FFmpeg"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "openai>=1.50.0",
+    "pydantic>=2.7.0",
+    "python-dotenv>=1.0.0",
+    "edge-tts>=6.1.12",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+auto-vlog = "auto_vlog.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
